@@ -18,7 +18,7 @@ function Field({ form, name, label, type = 'text', autoComplete, hint }) {
                 onChange={(event) => form.setData(name, event.target.value)}
                 autoComplete={autoComplete}
             />
-            {hint && !form.errors[name] && <p className="mt-1 text-xs text-slate-400">{hint}</p>}
+            {hint && !form.errors[name] && <p className="mt-1 text-xs text-slate-500">{hint}</p>}
             <FieldError message={form.errors[name]} />
         </div>
     );
@@ -55,15 +55,15 @@ export default function Edit({ profile, stats }) {
                     </span>
                     <dl className="mt-6 grid grid-cols-2 gap-3 border-t border-slate-100 pt-5 text-sm">
                         <div>
-                            <dt className="text-xs text-slate-400">Artikel</dt>
+                            <dt className="text-xs text-slate-500">Artikel</dt>
                             <dd className="text-xl font-bold text-slate-900">{stats.posts}</dd>
                         </div>
                         <div>
-                            <dt className="text-xs text-slate-400">Terbit</dt>
+                            <dt className="text-xs text-slate-500">Terbit</dt>
                             <dd className="text-xl font-bold text-slate-900">{stats.published}</dd>
                         </div>
                     </dl>
-                    <p className="mt-5 text-xs text-slate-400">Bergabung {formatDate(profile.created_at)}</p>
+                    <p className="mt-5 text-xs text-slate-500">Bergabung {formatDate(profile.created_at)}</p>
                 </aside>
 
                 <div className="space-y-6">

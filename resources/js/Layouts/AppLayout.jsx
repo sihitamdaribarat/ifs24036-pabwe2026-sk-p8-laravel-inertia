@@ -33,7 +33,7 @@ function Sidebar({ user, path, onNavigate }) {
 
             <nav className="flex-1 space-y-6">
                 <div className="space-y-1">
-                    <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-500 uppercase">Penulis</p>
+                    <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-400 uppercase">Penulis</p>
                     <SidebarLink href="/dashboard/posts" icon={Newspaper} active={path.startsWith('/dashboard/posts')} onNavigate={onNavigate}>
                         Artikel Saya
                     </SidebarLink>
@@ -44,7 +44,7 @@ function Sidebar({ user, path, onNavigate }) {
 
                 {user.is_admin && (
                     <div className="space-y-1">
-                        <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-500 uppercase">Admin</p>
+                        <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-400 uppercase">Admin</p>
                         <SidebarLink href="/admin/users" icon={Users} active={path.startsWith('/admin/users')} onNavigate={onNavigate}>
                             Kelola Pengguna
                         </SidebarLink>
@@ -55,7 +55,7 @@ function Sidebar({ user, path, onNavigate }) {
                 )}
 
                 <div className="space-y-1">
-                    <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-500 uppercase">Publik</p>
+                    <p className="px-3 pb-1 text-[11px] font-bold tracking-widest text-slate-400 uppercase">Publik</p>
                     <SidebarLink href="/" icon={Globe} active={false} onNavigate={onNavigate}>
                         Lihat Blog Publik
                     </SidebarLink>

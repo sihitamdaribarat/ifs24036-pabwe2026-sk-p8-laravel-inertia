@@ -89,7 +89,7 @@ export function FlashToast() {
                 <button
                     type="button"
                     onClick={() => setToast(null)}
-                    className="rounded p-0.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+                    className="rounded p-0.5 text-slate-500 hover:bg-slate-100 hover:text-slate-700"
                     aria-label="Tutup notifikasi"
                 >
                     <X className="size-4" />

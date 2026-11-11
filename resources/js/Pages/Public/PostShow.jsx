@@ -88,7 +88,7 @@ export default function PostShow({ post, related }) {
                     <div className="mt-14 flex gap-4 rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200">
                         <Avatar name={post.user.name} className="size-14 text-lg" />
                         <div>
-                            <p className="text-xs font-bold tracking-widest text-slate-400 uppercase">Ditulis oleh</p>
+                            <p className="text-xs font-bold tracking-widest text-slate-600 uppercase">Ditulis oleh</p>
                             <p className="mt-1 text-lg font-bold text-slate-900">{post.user.name}</p>
                             <p className="mt-1 text-sm leading-relaxed text-slate-600">
                                 {post.user.bio || 'Penulis komunitas BlogVerse Pro.'}
@@ -111,7 +111,7 @@ export default function PostShow({ post, related }) {
                                     <h3 className="mt-3 font-serif text-lg leading-snug font-bold text-slate-900 group-hover:text-primary-700">
                                         {item.title}
                                     </h3>
-                                    <p className="mt-1 text-xs text-slate-400">
+                                    <p className="mt-1 text-xs text-slate-500">
                                         {item.user?.name} · {formatDate(item.published_at)}
                                     </p>
                                 </Link>

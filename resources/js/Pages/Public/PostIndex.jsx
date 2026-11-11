@@ -46,13 +46,13 @@ function Hero({ user }) {
 function PostCard({ post }) {
     return (
         <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60">
-            <Link href={`/articles/${post.slug}`} className="block aspect-[16/9] overflow-hidden">
+            <Link href={`/articles/${post.slug}`} className="block aspect-[16/9] overflow-hidden" aria-label={`Baca artikel: ${post.title}`}>
                 <CoverImage post={post} className="h-full w-full transition duration-500 group-hover:scale-105" />
             </Link>
             <div className="flex flex-1 flex-col p-5">
                 <div className="flex items-center justify-between gap-2">
                     <CategoryBadge category={post.category} />
-                    <span className="inline-flex items-center gap-1 text-xs text-slate-400">
+                    <span className="inline-flex items-center gap-1 text-xs text-slate-500">
                         <Clock className="size-3.5" /> {readingTime(post.content)} menit baca
                     </span>
                 </div>
@@ -64,7 +64,7 @@ function PostCard({ post }) {
                     <Avatar name={post.user?.name ?? '?'} className="size-8 text-xs" />
                     <div className="min-w-0 text-xs">
                         <p className="truncate font-semibold text-slate-700">{post.user?.name}</p>
-                        <p className="text-slate-400">{formatDate(post.published_at)}</p>
+                        <p className="text-slate-500">{formatDate(post.published_at)}</p>
                     </div>
                 </div>
             </div>

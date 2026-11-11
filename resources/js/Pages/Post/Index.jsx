@@ -135,13 +135,13 @@ export default function Index({ posts, stats, filters, aiDrafts, aiMaxItems }) {
             title="Artikel Saya"
             actions={
                 <>
-                    <a href="/dashboard/posts/export" className="btn-secondary">
+                    <a href="/dashboard/posts/export" className="btn-secondary" aria-label="Ekspor artikel ke Excel">
                         <Download className="size-4" /> <span className="hidden sm:inline">Ekspor</span>
                     </a>
-                    <button type="button" className="btn-secondary" onClick={() => setImportOpen(true)}>
+                    <button type="button" className="btn-secondary" onClick={() => setImportOpen(true)} aria-label="Impor artikel dari Excel">
                         <Upload className="size-4" /> <span className="hidden sm:inline">Impor</span>
                     </button>
-                    <button type="button" className="btn-secondary text-primary-700" onClick={() => setAiOpen(true)}>
+                    <button type="button" className="btn-secondary text-primary-700" onClick={() => setAiOpen(true)} aria-label="AI Generator artikel">
                         <Sparkles className="size-4" /> <span className="hidden sm:inline">AI Generator</span>
                     </button>
                     <button type="button" className="btn-primary" onClick={() => setCreating(true)}>
@@ -177,7 +177,11 @@ export default function Index({ posts, stats, filters, aiDrafts, aiMaxItems }) {
                         <ul className="divide-y divide-slate-100">
                             {posts.data.map((post) => (
                                 <li key={post.id} className="flex items-center gap-4 px-4 py-3.5 transition hover:bg-slate-50/70 sm:px-5">
-                                    <Link href={`/dashboard/posts/${post.id}`} className="hidden shrink-0 sm:block">
+                                    <Link
+                                        href={`/dashboard/posts/${post.id}`}
+                                        className="hidden shrink-0 sm:block"
+                                        aria-label={`Detail artikel: ${post.title}`}
+                                    >
                                         <CoverImage post={post} className="h-14 w-20 rounded-lg" />
                                     </Link>
                                     <div className="min-w-0 flex-1">

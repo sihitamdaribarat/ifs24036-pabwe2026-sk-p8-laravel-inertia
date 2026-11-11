@@ -47,7 +47,7 @@ export default function Register() {
                                 autoComplete={autoComplete}
                                 required
                             />
-                            {hint && !form.errors[name] && <p className="mt-1 text-xs text-slate-400">{hint}</p>}
+                            {hint && !form.errors[name] && <p className="mt-1 text-xs text-slate-500">{hint}</p>}
                             <FieldError message={form.errors[name]} />
                         </div>
                     ))}

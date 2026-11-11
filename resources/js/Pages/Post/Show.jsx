@@ -102,7 +102,7 @@ export default function Show({ post }) {
             actions={
                 <>
                     {post.is_published && (
-                        <a href={`/articles/${post.slug}`} target="_blank" rel="noreferrer" className="btn-secondary">
+                        <a href={`/articles/${post.slug}`} target="_blank" rel="noreferrer" className="btn-secondary" aria-label="Lihat Publik (buka di tab baru)">
                             <ExternalLink className="size-4" /> <span className="hidden sm:inline">Lihat Publik</span>
                         </a>
                     )}
@@ -113,7 +113,7 @@ export default function Show({ post }) {
                     <button type="button" className="btn-secondary text-primary-700" onClick={() => setEditing(true)}>
                         <Pencil className="size-4" /> Ubah
                     </button>
-                    <button type="button" className="btn-danger" onClick={() => setDeleting(true)}>
+                    <button type="button" className="btn-danger" onClick={() => setDeleting(true)} aria-label="Hapus artikel">
                         <Trash2 className="size-4" /> <span className="hidden sm:inline">Hapus</span>
                     </button>
                 </>
@@ -135,19 +135,19 @@ export default function Show({ post }) {
                     {post.excerpt && <p className="mt-4 font-serif text-lg text-slate-600 italic">{post.excerpt}</p>}
                     <dl className="mt-6 grid gap-4 border-y border-slate-200 py-4 text-sm sm:grid-cols-4">
                         <div>
-                            <dt className="text-xs text-slate-400">Slug</dt>
+                            <dt className="text-xs text-slate-500">Slug</dt>
                             <dd className="truncate font-medium text-slate-700">{post.slug}</dd>
                         </div>
                         <div>
-                            <dt className="text-xs text-slate-400">Dipublikasikan</dt>
+                            <dt className="text-xs text-slate-500">Dipublikasikan</dt>
                             <dd className="font-medium text-slate-700">{formatDate(post.published_at, true)}</dd>
                         </div>
                         <div>
-                            <dt className="text-xs text-slate-400">Diperbarui</dt>
+                            <dt className="text-xs text-slate-500">Diperbarui</dt>
                             <dd className="font-medium text-slate-700">{formatDate(post.updated_at, true)}</dd>
                         </div>
                         <div>
-                            <dt className="text-xs text-slate-400">Waktu baca</dt>
+                            <dt className="text-xs text-slate-500">Waktu baca</dt>
                             <dd className="font-medium text-slate-700">{readingTime(post.content)} menit</dd>
                         </div>
                     </dl>

@@ -32,7 +32,7 @@ export function Pagination({ paginator }) {
                         <ChevronLeft className="size-4" /> Sebelumnya
                     </Link>
                 ) : (
-                    <span className={`${navClass} text-slate-300`}>
+                    <span className={`${navClass} text-slate-500`} aria-disabled="true">
                         <ChevronLeft className="size-4" /> Sebelumnya
                     </span>
                 )}
@@ -49,7 +49,7 @@ export function Pagination({ paginator }) {
                             {cleanLabel(link.label)}
                         </Link>
                     ) : (
-                        <span key={`gap-${index}`} className="px-2 text-slate-400">
+                        <span key={`gap-${index}`} className="px-2 text-slate-500" aria-hidden="true">
                             …
                         </span>
                     ),
@@ -59,7 +59,7 @@ export function Pagination({ paginator }) {
                         Berikutnya <ChevronRight className="size-4" />
                     </Link>
                 ) : (
-                    <span className={`${navClass} text-slate-300`}>
+                    <span className={`${navClass} text-slate-500`} aria-disabled="true">
                         Berikutnya <ChevronRight className="size-4" />
                     </span>
                 )}
@@ -178,6 +178,7 @@ export function ReadOnlyPostList({ posts, showAuthor = true }) {
                             rel="noreferrer"
                             className="btn-ghost shrink-0 px-2.5 text-primary-700"
                             title="Lihat di halaman publik"
+                            aria-label={`Lihat artikel publik: ${post.title}`}
                         >
                             <ExternalLink className="size-4" />
                         </a>

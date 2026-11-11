@@ -103,7 +103,7 @@ export function PostFormModal({ open, post = null, onClose }) {
                     </div>
                     <div>
                         <label htmlFor="post-excerpt" className="label">
-                            Ringkasan <span className="font-normal text-slate-400">(1-2 kalimat)</span>
+                            Ringkasan <span className="font-normal text-slate-500">(1-2 kalimat)</span>
                         </label>
                         <textarea
                             id="post-excerpt"
@@ -222,7 +222,7 @@ export function AiGeneratorModal({ open, maxItems = 5, onClose }) {
                 <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                         <label htmlFor="ai-count" className="label">
-                            Jumlah Artikel <span className="font-normal text-slate-400">(1–{maxItems})</span>
+                            Jumlah Artikel <span className="font-normal text-slate-500">(1–{maxItems})</span>
                         </label>
                         <input
                             id="ai-count"
@@ -242,7 +242,7 @@ export function AiGeneratorModal({ open, maxItems = 5, onClose }) {
                     </div>
                     <div>
                         <label htmlFor="ai-category" className="label">
-                            Kategori <span className="font-normal text-slate-400">(opsional)</span>
+                            Kategori <span className="font-normal text-slate-500">(opsional)</span>
                         </label>
                         <select
                             id="ai-category"

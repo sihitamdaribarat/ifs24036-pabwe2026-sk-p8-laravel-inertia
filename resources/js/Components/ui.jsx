@@ -53,11 +53,13 @@ export function CoverImage({ post, className = '' }) {
 
     return (
         <div
+            role="img"
+            aria-label={`Sampul artikel: ${post.title}`}
             className={`flex items-center justify-center bg-gradient-to-br ${
                 CATEGORY_GRADIENTS[post.category] ?? CATEGORY_GRADIENTS.Umum
             } ${className}`}
         >
-            <Newspaper className="size-1/4 max-h-16 max-w-16 text-white/70" strokeWidth={1.5} />
+            <Newspaper className="size-1/4 max-h-16 max-w-16 text-white/70" strokeWidth={1.5} aria-hidden="true" />
         </div>
     );
 }
@@ -99,7 +101,7 @@ export function StatCard({ icon: Icon, label, value, tone = 'primary', hint }) {
             <div>
                 <p className="text-sm font-medium text-slate-500">{label}</p>
                 <p className="text-2xl font-bold text-slate-900">{value}</p>
-                {hint && <p className="text-xs text-slate-400">{hint}</p>}
+                {hint && <p className="text-xs text-slate-500">{hint}</p>}
             </div>
         </div>
     );

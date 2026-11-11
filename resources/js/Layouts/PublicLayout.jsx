@@ -210,7 +210,7 @@ function Footer() {
                     </nav>
                 </div>
             </div>
-            <div className="border-t border-white/10 py-5 text-center text-xs text-slate-500">
+            <div className="border-t border-white/10 py-5 text-center text-xs text-slate-400">
                 © {new Date().getFullYear()} BlogVerse Pro · Dibangun dengan Laravel, Inertia.js &amp; React
             </div>
         </footer>

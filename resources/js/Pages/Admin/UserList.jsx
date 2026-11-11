@@ -91,7 +91,7 @@ export default function UserList({ users, summary, filters }) {
                                                         <Avatar name={user.name} />
                                                         <div className="min-w-0">
                                                             <p className="font-semibold text-slate-900">
-                                                                {user.name} {isSelf && <span className="text-xs font-normal text-slate-400">(Anda)</span>}
+                                                                {user.name} {isSelf && <span className="text-xs font-normal text-slate-500">(Anda)</span>}
                                                             </p>
                                                             <p className="text-xs text-slate-500">
                                                                 @{user.username} · {user.email}
@@ -110,15 +110,15 @@ export default function UserList({ users, summary, filters }) {
                                                 </td>
                                                 <td className="px-5 py-3 text-center">
                                                     <span className="font-semibold text-slate-800">{user.posts_count}</span>
-                                                    <span className="text-xs text-slate-400"> ({user.published_posts_count} terbit)</span>
+                                                    <span className="text-xs text-slate-500"> ({user.published_posts_count} terbit)</span>
                                                 </td>
                                                 <td className="px-5 py-3 text-slate-500">{formatDate(user.created_at)}</td>
                                                 <td className="px-5 py-3">
                                                     <div className="flex justify-end gap-1">
-                                                        <Link href={`/admin/users/${user.id}/posts`} className="btn-ghost px-2.5 text-primary-700" title="Lihat artikel">
+                                                        <Link href={`/admin/users/${user.id}/posts`} className="btn-ghost px-2.5 text-primary-700" title="Lihat artikel" aria-label={`Lihat artikel ${user.name}`}>
                                                             <Eye className="size-4" />
                                                         </Link>
-                                                        <a href={`/admin/users/${user.id}/posts/export`} className="btn-ghost px-2.5 text-emerald-700" title="Ekspor artikel ke Excel">
+                                                        <a href={`/admin/users/${user.id}/posts/export`} className="btn-ghost px-2.5 text-emerald-700" title="Ekspor artikel ke Excel" aria-label={`Ekspor artikel ${user.name} ke Excel`}>
                                                             <Download className="size-4" />
                                                         </a>
                                                         {!isSelf && (
@@ -129,6 +129,7 @@ export default function UserList({ users, summary, filters }) {
                                                                     onClick={() => toggleRole(user)}
                                                                     disabled={processing === `role-${user.id}`}
                                                                     title={user.role === 'admin' ? 'Jadikan penulis' : 'Jadikan admin'}
+                                                                    aria-label={`${user.role === "admin" ? "Jadikan penulis" : "Jadikan admin"}: ${user.name}`}
                                                                 >
                                                                     {processing === `role-${user.id}` ? (
                                                                         <Spinner />
@@ -143,6 +144,7 @@ export default function UserList({ users, summary, filters }) {
                                                                     className="btn-ghost px-2.5 text-rose-600"
                                                                     onClick={() => setDeleting(user)}
                                                                     title="Hapus pengguna"
+                                                                    aria-label={`Hapus pengguna ${user.name}`}
                                                                 >
                                                                     <Trash2 className="size-4" />
                                                                 </button>

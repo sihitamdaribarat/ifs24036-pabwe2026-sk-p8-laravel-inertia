@@ -60,7 +60,7 @@ export default function Login() {
                             <button
                                 type="button"
                                 onClick={() => setShowPassword((value) => !value)}
-                                className="absolute inset-y-0 right-0 flex items-center px-3 text-slate-400 hover:text-slate-600"
+                                className="absolute inset-y-0 right-0 flex items-center px-3 text-slate-500 hover:text-slate-700"
                                 aria-label={showPassword ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi'}
                             >
                                 {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
