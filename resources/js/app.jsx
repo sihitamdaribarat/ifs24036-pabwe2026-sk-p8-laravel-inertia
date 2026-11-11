@@ -18,6 +18,7 @@ createInertiaApp({
         return page();
     },
     setup({ el, App, props }) {
+        document.getElementById('app-fallback')?.remove();
         createRoot(el).render(<App {...props} />);
     },
     // Top progress bar untuk setiap navigasi / request Inertia

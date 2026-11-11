@@ -193,7 +193,7 @@ function Footer() {
                     </p>
                 </div>
                 <div>
-                    <h3 className="text-xs font-bold tracking-widest text-slate-400 uppercase">Navigasi</h3>
+                    <h2 className="text-xs font-bold tracking-widest text-slate-400 uppercase">Navigasi</h2>
                     <nav className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium md:flex-col" aria-label="Navigasi footer">
                         <Link href="/" className="hover:text-white">
                             Beranda Publik

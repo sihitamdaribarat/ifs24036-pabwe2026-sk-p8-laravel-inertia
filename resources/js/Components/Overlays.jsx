@@ -98,7 +98,7 @@ export function ConfirmDialog({ open, title, message, confirmLabel = 'Hapus', pr
                         <AlertTriangle className="size-5" />
                     </div>
                     <div>
-                        <h3 className="text-base font-semibold text-slate-900">{title}</h3>
+                        <h2 className="text-base font-semibold text-slate-900">{title}</h2>
                         <p className="mt-1 text-sm text-slate-500">{message}</p>
                     </div>
                 </div>

@@ -14,6 +14,11 @@
         <x-inertia::head />
     </head>
     <body class="font-sans antialiased">
+        {{-- Kerangka sementara sebelum React merender: tetap punya landmark main & h1. Dihapus di resources/js/app.jsx. --}}
+        <main id="app-fallback" class="flex min-h-screen items-center justify-center bg-white">
+            <h1 class="text-lg font-semibold text-slate-700">BlogVerse Pro</h1>
+            <p class="sr-only">Memuat halaman…</p>
+        </main>
         <x-inertia::app />
     </body>
 </html>
