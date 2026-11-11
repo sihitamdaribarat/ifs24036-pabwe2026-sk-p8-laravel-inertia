@@ -1,0 +1,30 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@inertiajs/react": "^3.11.0",
+        "@tailwindcss/vite": "^4.0.0",
+        "@toast-ui/editor": "^3.2.2",
+        "@vitejs/plugin-react": "^6.3.0",
+        "concurrently": "^10.0.3",
+        "dompurify": "^3.4.17",
+        "laravel-vite-plugin": "^3.1",
+        "lucide-react": "^1.71.0",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
+        "tailwindcss": "^4.0.0",
+        "vite": "^8.0.0"
+    },
+    "optionalDependencies": {
+        "@laravel/multiplex": "^0.4.1"
+    },
+    "name": "ifs24036-pabwe2026-sk-p8-laravel-inertia",
+    "overrides": {
+        "dompurify": "^3.4.17"
+    }
+}

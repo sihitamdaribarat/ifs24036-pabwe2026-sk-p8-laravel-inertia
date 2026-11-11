@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+@import '@toast-ui/editor/dist/toastui-editor.css';
+
+@source '../js/**/*.jsx';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-serif: 'Lora', ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+
+    --color-primary-50: #eef2ff;
+    --color-primary-100: #e0e7ff;
+    --color-primary-200: #c7d2fe;
+    --color-primary-300: #a5b4fc;
+    --color-primary-400: #818cf8;
+    --color-primary-500: #6366f1;
+    --color-primary-600: #4f46e5;
+    --color-primary-700: #4338ca;
+    --color-primary-800: #3730a3;
+    --color-primary-900: #312e81;
+
+    --animate-pill-in: pill-in 180ms ease-out;
+    --animate-toast-in: toast-in 220ms ease-out;
+
+    @keyframes pill-in {
+        from {
+            opacity: 0;
+            transform: translate(-50%, 12px);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    @keyframes toast-in {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-800;
+    }
+
+    /* Seluruh elemen interaktif menampilkan cursor pointer saat hover */
+    a,
+    button,
+    summary,
+    select,
+    label[for],
+    [role='button'],
+    [role='menuitem'],
+    input[type='checkbox'],
+    input[type='radio'],
+    input[type='file'] {
+        cursor: pointer;
+    }
+
+    button:disabled,
+    [aria-disabled='true'] {
+        cursor: not-allowed;
+    }
+}
+
+@utility input {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm transition placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 focus:outline-none;
+}
+
+@utility label {
+    @apply mb-1.5 block text-sm font-medium text-slate-700;
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:ring-2 focus:ring-offset-1 focus:outline-none disabled:opacity-60;
+}
+
+@utility btn-primary {
+    @apply btn bg-primary-600 text-white shadow-sm hover:bg-primary-700 focus:ring-primary-300;
+}
+
+@utility btn-secondary {
+    @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus:ring-slate-200;
+}
+
+@utility btn-danger {
+    @apply btn bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-300;
+}
+
+@utility btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 focus:ring-slate-200;
+}
+
+@utility card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+
+/* Tipografi artikel untuk TOAST UI Viewer */
+.article-viewer .toastui-editor-contents {
+    font-family: var(--font-serif);
+    font-size: 1.125rem;
+    line-height: 1.85;
+    color: #1e293b;
+}
+
+.article-viewer .toastui-editor-contents h1,
+.article-viewer .toastui-editor-contents h2,
+.article-viewer .toastui-editor-contents h3 {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    border-bottom: none;
+    letter-spacing: -0.01em;
+}
+
+.article-viewer .toastui-editor-contents h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.article-viewer .toastui-editor-contents p {
+    margin: 1rem 0;
+}
+
+.article-viewer .toastui-editor-contents pre {
+    border-radius: 0.75rem;
+}
+
+.toastui-editor-defaultUI {
+    border-radius: 0.75rem;
+}
